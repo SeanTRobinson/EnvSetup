@@ -16,16 +16,16 @@ source ~/.bash_profile
 brew install fish
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
-mkdir -p ~/.config/fish
+#mkdir -p ~/.config/fish
 brew install node
 npm install -g grunt-cli
 fish_update_completions
-echo "set -g -x fish_greeting ''" >> ~/.config/fish/config.fish
-echo "set PATH ~/Documents/Development/Android_SDK/sdk/platform-tools/ $PATH" >> ~/.config/fish/config.fish
-echo "set -g -x PATH /usr/local/bin $PATH" >> ~/.config/fish/config.fish
-cp .gitconfig ~/
-cp .hgrc ~/
-cp .viminfo ~/
-cp .vimrc ~/
-cp -R .vim ~/
-cp -R .atom ~/
+#echo "set -g -x fish_greeting ''" >> ~/.config/fish/config.fish
+#echo "set PATH ~/Documents/Development/Android_SDK/sdk/platform-tools/ $PATH" >> ~/.config/fish/config.fish
+#echo "set -g -x PATH /usr/local/bin $PATH" >> ~/.config/fish/config.fish
+#cp .gitconfig ~/
+#cp .hgrc ~/
+#cp .viminfo ~/
+#cp .vimrc ~/
+#cp -R .vim ~/
+#cp -R .atom ~/
