@@ -21,11 +21,15 @@ brew doctor
 echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
 source ~/.bash_profile
 
-"Installing Fish shell"
+echo "Installing Fish shell"
 brew install fish
 echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
 mkdir -p ~/.config/fish
+fish_update_completions
+
+echo "Configuring OMF"
+curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 
 echo "Installing Node"
 brew install node
@@ -33,10 +37,6 @@ npm install -g grunt-cli
 npm install -g phantomjs
 npm install -g mocha
 
-fish_update_completions
-#echo "set -g -x fish_greeting ''" >> ~/.config/fish/config.fish
-#echo "set PATH ~/Documents/Development/Android_SDK/sdk/platform-tools/ $PATH" >> ~/.config/fish/config.fish
-#echo "set -g -x PATH /usr/local/bin $PATH" >> ~/.config/fish/config.fish
 #cp .gitconfig ~/
 #cp .hgrc ~/
 #cp .viminfo ~/
