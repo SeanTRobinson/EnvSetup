@@ -31,6 +31,10 @@ fish_update_completions
 echo "Configuring OMF"
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 
+echo "Configuring Vim"
+git clone https://github.com/SeanTRobinson/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+
 echo "Installing Node"
 brew install node
 npm install -g grunt-cli
