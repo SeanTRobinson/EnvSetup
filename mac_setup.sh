@@ -31,6 +31,10 @@ fish_update_completions
 echo "Configuring OMF"
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 
+echo "Installing autojump"
+brew install autojump
+echo "[ -f /usr/local/share/autojump/autojump.fish ]; and . /usr/local/share/autojump/autojump.fish" >> ~/.config/fish/config.fish
+
 echo "Setting up alias"
 echo "alias gs 'git status'" >> ~/.config/fish/config.fish
 echo "alias g 'git'" >> ~/.config/fish/config.fish
