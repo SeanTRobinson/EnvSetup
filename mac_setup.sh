@@ -31,6 +31,15 @@ fish_update_completions
 echo "Configuring OMF"
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 
+echo "Setting up alias"
+echo "alias gs 'git status'" >> ~/.config/fish/config.fish
+echo "alias g 'git'" >> ~/.config/fish/config.fish
+echo "alias gct 'git commit -am'" >> ~/.config/fish/config.fish
+echo "alias gd 'git diff'" >> ~/.config/fish/config.fish
+echo "set PATH ~/Documents/Development/Android_SDK/sdk/platform-tools/ $PATH" >> ~/.config/fish/config.fish
+echo "set -g -x PATH /usr/local/bin $PATH" >> ~/.config/fish/config.fish
+echo "set -g -x fish_greeting 'Welcome Sean'" >> ~/.config/fish/config.fish
+
 echo "Configuring Vim"
 git clone https://github.com/SeanTRobinson/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
